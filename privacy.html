@@ -1,10 +1,87 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>来电管家隐私政策</title>
-<style>body{font:16px/1.7 -apple-system,system-ui,sans-serif;max-width:680px;margin:0 auto;padding:24px;color:#1c1c1e}@media(prefers-color-scheme:dark){body{background:#000;color:#f2f2f7}}h1{font-size:24px}h2{font-size:18px;margin-top:24px}</style></head><body>
-<h1>来电管家隐私政策</h1><p>更新日期：2026 年 11 月 3 日</p>
-<h2>我们收集什么</h2><ul><li>你主动标记的号码和类别</li><li>设备匿名标识（用于统计和防刷）</li><li>上报时的网络地址摘要（只存哈希，用于每日次数限制，2 天后删除）</li></ul>
-<h2>我们不收集什么</h2><ul><li>不读取通话记录、通讯录、短信</li><li>不追踪你，不投放广告，不与第三方共享用于营销</li></ul>
-<h2>如何使用</h2><p>汇总多位用户的标记，生成号码库，在来电时识别或拦截。号码库下载到你的手机，由系统在本机比对。</p>
-<h2>存储位置与出境</h2><p>标记数据存储在 Supabase 新加坡区域服务器，属于向境外提供个人信息。使用标记功能即会上传，不标记则不上传，本机号码库拦截照常。上传内容仅限号码、类别、设备匿名标识和网络地址摘要。标记数据保留不超过 180 天。</p>
-<h2>你的权利</h2><p>你可以随时卸载 App 停止上报。号码被误标，可发邮件到 xuzhiqing2025@hotmail.com 申诉，我们核实后清除。需要删除数据，请联系我们并提供设备标识。</p>
-<h2>联系我们</h2><p>邮箱：xuzhiqing2025@hotmail.com</p>
-</body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>隐私政策 · 来电保镖</title>
+<meta name="description" content="来电保镖收集什么、不收集什么、如何存储和保留，以及运营者和个人信息处理者。">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z' fill='%231d5cf0'/%3E%3Cpath d='m10.6 16.2 3.7 3.7 7.2-7.4' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<style>
+.in-app body{padding:0 8px}
+.in-app .doc{padding:0 16px}
+/* 无外部样式时的兜底（网站上会被 site.css 覆盖/并存） */
+body{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:#0b1424;background:#fff}
+@media (prefers-color-scheme:dark){body{background:#0b0d12;color:#f2f4f8}}
+</style>
+<script>if(location.protocol==="file:")document.documentElement.classList.add("in-app");</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="来电保镖首页"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-nav)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+    <ul class="nav-links">
+      <li class="opt"><a href="index.html#features">功能</a></li>
+      <li class="opt"><a href="index.html#setup">开启方法</a></li>
+      <li><a href="index.html#faq">常见问题</a></li>
+      <li><a href="appeal.html">误标申诉</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<div class="doc">
+  <div class="doc-hero"><h1>来电保镖隐私政策</h1><p class="meta">更新日期：2026年11月26日</p>
+    <nav class="toc" aria-label="目录"><b>目录</b><ol><li><a href="#s1">我们收集什么</a></li><li><a href="#s2">我们不收集什么</a></li><li><a href="#s3">如何使用</a></li><li><a href="#s4">存储与保留</a></li><li><a href="#s5">你的权利</a></li><li><a href="#s6">运营者与个人信息处理者</a></li><li><a href="#s7">联系我们</a></li></ol></nav>
+  </div>
+  <article class="doc-body">
+<h2 id="s1">我们收集什么</h2>
+<ul>
+<li>你主动标记的号码和类别</li>
+<li>设备匿名标识（用于统计和防刷）</li>
+<li>上报时的网络地址摘要（只存哈希，用于每日次数限制，2 天后删除）</li>
+<li>你主动提交的误标申诉：被申诉号码、身份或原因、选填的说明和单位名称、用于通知结果的联系方式（手机或邮箱），以及申诉时的网络地址摘要（只存哈希，用于防滥用）</li>
+</ul>
+<h2 id="s2">我们不收集什么</h2>
+<ul>
+<li>不读取通话记录、通讯录、短信</li>
+<li>不追踪你，不投放广告，不与第三方共享用于营销</li>
+</ul>
+<h2 id="s3">如何使用</h2>
+<p>汇总多位用户的标记，生成号码库，在来电时识别或拦截。号码库下载到你的手机，由系统在本机比对。</p>
+<h2 id="s4">存储与保留</h2>
+<p>标记数据存储在境外云服务器上，属于向境外提供个人信息。使用标记功能即会上传，不标记则不上传，本机号码库拦截照常。上传内容仅限号码、类别、设备匿名标识和网络地址摘要；若你提交误标申诉，还会包括说明、单位名称（如有）和联系方式。标记数据保留不超过 180 天。申诉记录在处理完成 90 天后删除。</p>
+<h2 id="s5">你的权利</h2>
+<p>你可以随时卸载 App 停止上报。号码被误标，请在官网申诉页（<a href="https://www.guardmycall.cn/appeal.html">https://www.guardmycall.cn/appeal.html</a>）提交，也可在 App「设置 › 误标申诉」打开，我们人工核实后处理。查询进度请到<a href="https://www.guardmycall.cn/appeal-status.html">申诉查询</a>页。需要删除数据，请联系我们并提供设备标识。</p>
+<h2 id="s6">运营者与个人信息处理者</h2>
+<p>来电保镖由福州台江区麦哲伦商贸有限公司运营。就本政策而言，该公司是个人信息处理者。</p>
+<h2 id="s7">联系我们</h2>
+<p>邮箱：xuzhiqing2025@hotmail.com</p>
+  </article>
+</div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-foot)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+        <p class="tagline">诈骗、骚扰电话，来电时直接拦下。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <div><h4>产品</h4><ul><li><a href="index.html#features">功能</a></li><li><a href="index.html#setup">开启方法</a></li><li><a href="index.html#faq">常见问题</a></li></ul></div>
+        <div><h4>帮助与条款</h4><ul><li><a href="appeal.html">误标申诉</a></li><li><a href="appeal-status.html">申诉查询</a></li><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">用户协议</a></li></ul></div>
+        <div><h4>联系我们</h4><ul><li><a href="mailto:xuzhiqing2025@hotmail.com">xuzhiqing2025@hotmail.com</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="legal">
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备2026040594号-2</a>
+      <span>仅在中国大陆提供服务</span>
+    </div>
+  </div>
+</footer>
+<script>(function(){var n=document.getElementById("top");function f(){n.classList.toggle("scrolled",window.scrollY>4)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
+</body>
+</html>

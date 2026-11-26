@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>误标申诉 · 来电保镖</title>
+<meta name="description" content="号码被来电保镖误标，可以在这里提交申诉。人工核实，一般 3 个工作日内处理完。">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z' fill='%231d5cf0'/%3E%3Cpath d='m10.6 16.2 3.7 3.7 7.2-7.4' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css?v=2">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="来电保镖首页"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-nav)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+    <ul class="nav-links">
+      <li class="opt"><a href="index.html#features">功能</a></li>
+      <li class="opt"><a href="index.html#setup">开启方法</a></li>
+      <li><a href="index.html#faq">常见问题</a></li>
+      <li><a href="appeal.html" aria-current="page">误标申诉</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="appeal">
+<div class="doc-hero"><h1>误标申诉</h1>
+<p class="lead">号码被误标可以在这里申诉。我们会人工核实，一般 3 个工作日内处理完，结果发到你留下的手机或邮箱。已有编号的，请到「查询申诉进度」。</p></div>
+<nav class="appeal-tabs" aria-label="申诉与查询"><a href="appeal.html" aria-current="page">提交误标申诉</a><a href="appeal-status.html">查询申诉进度</a></nav>
+<div class="panel">
+<section id="form-sec">
+  <form id="form" novalidate>
+    <label class="f">
+      <span class="lbl">被误标的号码</span>
+      <input type="tel" name="number" inputmode="tel" autocomplete="tel" placeholder="手机或固话，如 13800138000" required>
+      <p class="hint" id="num-hint">手机号或带区号的固话都可以。</p>
+      <p class="err" id="err-number">请填写有效的手机号或带区号的固话。</p>
+    </label>
+
+    <fieldset class="f">
+      <legend class="lbl">你和这个号码的关系</legend>
+      <div class="radios">
+        <label><input type="radio" name="reason" value="owner" required> 我是这个号码的使用者</label>
+        <label><input type="radio" name="reason" value="business"> 我是商家 / 机构</label>
+        <label><input type="radio" name="reason" value="reassigned"> 号码换人使用了</label>
+        <label><input type="radio" name="reason" value="other"> 其他</label>
+      </div>
+      <p class="err" id="err-reason">请选择一项。</p>
+    </fieldset>
+
+    <label class="f hidden" id="company-wrap">
+      <span class="lbl">单位名称 <span class="muted">选填</span></span>
+      <input type="text" name="company" maxlength="80" placeholder="公司或机构名称">
+      <p class="hint">如需提供营业执照等证明，提交后把材料发到 <a href="mailto:xuzhiqing2025@hotmail.com">xuzhiqing2025@hotmail.com</a>，注明申诉编号即可。我们不在这里上传图片，免得材料传丢或过大。</p>
+    </label>
+
+    <label class="f">
+      <span class="lbl">补充说明 <span class="muted">选填</span> <span class="count" id="desc-count">0 / 200</span></span>
+      <textarea name="description" maxlength="200" placeholder="比如：这是我的私人号码，从未用于推销。"></textarea>
+    </label>
+
+    <label class="f">
+      <span class="lbl">联系方式</span>
+      <input type="text" name="contact" autocomplete="email" placeholder="手机号或邮箱，用来通知处理结果" required>
+      <p class="err" id="err-contact">请填写有效的手机号或邮箱。</p>
+    </label>
+
+    <div class="hp" aria-hidden="true">
+      <label>网站 <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <input type="hidden" name="started_at" id="started_at">
+
+    <div class="row">
+      <input type="checkbox" name="agreed" id="agreed" required>
+      <label for="agreed">我已阅读并同意<a href="privacy.html">隐私政策</a>。</label>
+    </div>
+    <p class="err" id="err-agreed">请先勾选同意隐私政策。</p>
+    <p class="err" id="err-form"></p>
+    <button type="submit" id="submit-btn">提交申诉</button>
+  </form>
+</section>
+
+<section id="ok-sec" class="hidden">
+  <div class="card">
+    <p class="ok">申诉已提交</p>
+    <p>请记下或截图保存这个编号，查询进度时要用：</p>
+    <p class="id" id="ok-id"></p>
+    <p id="ok-extra"></p>
+    <p>我们会在 <strong>3 个工作日</strong>内人工核实。处理结果会发到你留下的联系方式。诈骗类标记一律人工审核，不会自动清除。</p>
+  </div>
+  <a class="btn-block" id="to-status" href="appeal-status.html">查询处理进度</a>
+  <button type="button" class="secondary" id="new-appeal">再申一个号码</button>
+</section>
+</div>
+<section class="faq faq-block" id="faq">
+  <h2>常见问题</h2>
+  <details open>
+    <summary>号码为什么会被标？</summary>
+    <p>来电保镖根据用户自愿标记来识别来电。如果有人把你的号码标成骚扰或诈骗，号码就可能出现在识别或拦截名单里。标记来自用户，可能有误，所以我们提供这条申诉通道。</p>
+  </details>
+  <details>
+    <summary>什么情况下会被拦截？</summary>
+    <p>至少 3 台不同的手机标记同一号码后，它才会进入拦截名单。超过 180 天的标记会自动删除，号码也会从名单里拿掉。快递、外卖号码默认只提示、不拦截。</p>
+  </details>
+  <details>
+    <summary>多久能处理完？处理结果怎么通知我？</summary>
+    <p>一般 3 个工作日。我们会按你留下的手机或邮箱通知。你也可以随时带着申诉编号和号码，到<a href="appeal-status.html">申诉查询</a>页查看进度。</p>
+  </details>
+  <details>
+    <summary>商家需要提供证明吗？</summary>
+    <p>不是必须。先提交申诉并留下联系方式；如果我们需要核对，会联系你。你也可以事后把营业执照等材料发到 xuzhiqing2025@hotmail.com，注明申诉编号。</p>
+  </details>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-foot)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+        <p class="tagline">诈骗、骚扰电话，来电时直接拦下。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <div><h4>产品</h4><ul><li><a href="index.html#features">功能</a></li><li><a href="index.html#setup">开启方法</a></li><li><a href="index.html#faq">常见问题</a></li></ul></div>
+        <div><h4>帮助与条款</h4><ul><li><a href="appeal.html">误标申诉</a></li><li><a href="appeal-status.html">申诉查询</a></li><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">用户协议</a></li></ul></div>
+        <div><h4>联系我们</h4><ul><li><a href="mailto:xuzhiqing2025@hotmail.com">xuzhiqing2025@hotmail.com</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="legal">
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备2026040594号-2</a>
+      <span>仅在中国大陆提供服务</span>
+    </div>
+  </div>
+</footer>
+<script>(function(){var n=document.getElementById("top");function f(){n.classList.toggle("scrolled",window.scrollY>4)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
+<script src="assets/appeal.js?v=2"></script>
+<script>
+(function(){
+  var A = window.GMCAppeal;
+  document.getElementById("started_at").value = String(Date.now());
+  var form = document.getElementById("form");
+  var desc = form.description;
+  var count = document.getElementById("desc-count");
+  desc.addEventListener("input", function(){ count.textContent = desc.value.length+" / 200"; });
+
+  form.number.addEventListener("input", function(){
+    var n = A.normalizeCN(form.number.value);
+    document.getElementById("num-hint").textContent = n
+      ? "已识别为 "+A.displayNumber(n)+"。 "
+      : "手机号或带区号的固话都可以。";
+    A.setErr("err-number", false);
+  });
+
+  form.querySelectorAll("[name=reason]").forEach(function(r){
+    r.addEventListener("change", function(){
+      document.getElementById("company-wrap").classList.toggle("hidden", form.reason.value!=="business");
+      A.setErr("err-reason", false);
+    });
+  });
+
+  function show(id){
+    ["form-sec","ok-sec"].forEach(function(s){
+      document.getElementById(s).classList.toggle("hidden", s!==id);
+    });
+    window.scrollTo(0,0);
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    A.setErr("err-number", false); A.setErr("err-reason", false);
+    A.setErr("err-contact", false); A.setErr("err-agreed", false); A.setErr("err-form", false);
+    var number = A.normalizeCN(form.number.value);
+    var reason = (form.querySelector("[name=reason]:checked")||{}).value;
+    var contact = form.contact.value.trim();
+    var bad = false;
+    if(!number){ A.setErr("err-number", true); bad = true; }
+    if(!reason){ A.setErr("err-reason", true); bad = true; }
+    if(!A.validContact(contact)){ A.setErr("err-contact", true); bad = true; }
+    if(!form.agreed.checked){ A.setErr("err-agreed", true); bad = true; }
+    if(bad) return;
+
+    var btn = document.getElementById("submit-btn");
+    btn.disabled = true; btn.textContent = "提交中…";
+    A.post({
+      op:"submit",
+      number: form.number.value,
+      reason: reason,
+      description: form.description.value.trim(),
+      company: form.company.value.trim(),
+      contact: contact,
+      started_at: Number(form.started_at.value),
+      website: form.website.value,
+      agreed: true
+    }).then(function(r){
+      var res = r.res, data = r.data;
+      if(res.status===429 || data.error==="daily_limit"){
+        A.setErr("err-form", true, "今天提交次数已达上限，请明天再试。");
+        return;
+      }
+      if(!res.ok || !data.ok){
+        A.setErr("err-form", true, "提交没有成功，请检查号码和联系方式后再试。");
+        return;
+      }
+      document.getElementById("ok-id").textContent = data.id;
+      document.getElementById("ok-extra").textContent = data.reused
+        ? "这个号码已有正在处理的申诉，我们沿用原来的编号，不用重复排队。"
+        : "";
+      var q = "appeal-status.html?id="+encodeURIComponent(data.id)+"&number="+encodeURIComponent(form.number.value.trim());
+      document.getElementById("to-status").setAttribute("href", q);
+      show("ok-sec");
+    }).catch(function(){
+      A.setErr("err-form", true, "网络好像不太好，请稍后重试。");
+    }).then(function(){
+      btn.disabled = false; btn.textContent = "提交申诉";
+    });
+  });
+
+  document.getElementById("new-appeal").onclick = function(){
+    form.reset();
+    document.getElementById("started_at").value = String(Date.now());
+    document.getElementById("company-wrap").classList.add("hidden");
+    count.textContent = "0 / 200";
+    document.getElementById("num-hint").textContent = "手机号或带区号的固话都可以。";
+    document.getElementById("to-status").setAttribute("href", "appeal-status.html");
+    show("form-sec");
+  };
+})();
+</script>
+</body>
+</html>

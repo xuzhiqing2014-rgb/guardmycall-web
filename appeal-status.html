@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>申诉查询 · 来电保镖</title>
+<meta name="description" content="用申诉编号和当时提交的号码，查询来电保镖误标申诉的处理进度。">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z' fill='%231d5cf0'/%3E%3Cpath d='m10.6 16.2 3.7 3.7 7.2-7.4' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css?v=2">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="来电保镖首页"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-nav)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+    <ul class="nav-links">
+      <li class="opt"><a href="index.html#features">功能</a></li>
+      <li class="opt"><a href="index.html#setup">开启方法</a></li>
+      <li><a href="index.html#faq">常见问题</a></li>
+      <li><a href="appeal.html">误标申诉</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="appeal">
+<div class="doc-hero"><h1>申诉查询</h1>
+<p class="lead">填写提交时的申诉编号和号码，查看处理进度。还没有编号的，请先到「提交误标申诉」。</p></div>
+<nav class="appeal-tabs" aria-label="申诉与查询"><a href="appeal.html">提交误标申诉</a><a href="appeal-status.html" aria-current="page">查询申诉进度</a></nav>
+<div class="panel">
+<section id="status-sec">
+  <form id="status-form" novalidate>
+    <label class="f">
+      <span class="lbl">申诉编号</span>
+      <input type="text" name="sid" placeholder="例如 AP261110-A3K7" autocapitalize="characters" spellcheck="false" required>
+    </label>
+    <label class="f">
+      <span class="lbl">当时提交的号码</span>
+      <input type="tel" name="snumber" inputmode="tel" placeholder="提交申诉时填写的那个号码" required>
+    </label>
+    <p class="err" id="err-status"></p>
+    <button type="submit">查询</button>
+  </form>
+  <div id="status-result" class="card hidden"></div>
+</section>
+</div>
+<section class="faq faq-block" id="faq">
+  <h2>常见问题</h2>
+  <details open>
+    <summary>查询需要什么？</summary>
+    <p>需要申诉编号，以及提交时填写的那个号码。编号在提交成功后会显示，请记下或截图保存。两个都要填写，而且必须一致，才能查到。</p>
+  </details>
+  <details>
+    <summary>查不到怎么办？</summary>
+    <p>请核对编号和号码是否填对，不要漏掉编号里的横线或字母。如果刚提交，稍等片刻再查。仍查不到，可以<a href="appeal.html">重新提交</a>，同一号码若已有未处理的申诉，会返回原来的编号。</p>
+  </details>
+  <details>
+    <summary>处理完了会通知我吗？</summary>
+    <p>会发到你留下的手机或邮箱。你也可以随时回到本页查询。一般 3 个工作日内处理完。诈骗类标记一律人工审核，不会自动清除。</p>
+  </details>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7bff"/><stop offset="1" stop-color="#1446c2"/></linearGradient></defs><path d="M16 2.5 4.5 6.8v8.4c0 7 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.3 11.5-14.3V6.8L16 2.5Z" fill="url(#lg-foot)"/><path d="m10.6 16.2 3.7 3.7 7.2-7.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>来电保镖</span></a>
+        <p class="tagline">诈骗、骚扰电话，来电时直接拦下。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <div><h4>产品</h4><ul><li><a href="index.html#features">功能</a></li><li><a href="index.html#setup">开启方法</a></li><li><a href="index.html#faq">常见问题</a></li></ul></div>
+        <div><h4>帮助与条款</h4><ul><li><a href="appeal.html">误标申诉</a></li><li><a href="appeal-status.html">申诉查询</a></li><li><a href="privacy.html">隐私政策</a></li><li><a href="terms.html">用户协议</a></li></ul></div>
+        <div><h4>联系我们</h4><ul><li><a href="mailto:xuzhiqing2025@hotmail.com">xuzhiqing2025@hotmail.com</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="legal">
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备2026040594号-2</a>
+      <span>仅在中国大陆提供服务</span>
+    </div>
+  </div>
+</footer>
+<script>(function(){var n=document.getElementById("top");function f(){n.classList.toggle("scrolled",window.scrollY>4)}f();window.addEventListener("scroll",f,{passive:true})})();</script>
+<script src="assets/appeal.js?v=2"></script>
+<script>
+(function(){
+  var A = window.GMCAppeal;
+  var form = document.getElementById("status-form");
+  var params = new URLSearchParams(location.search);
+  if(params.get("id")) form.sid.value = params.get("id");
+  if(params.get("number")) form.snumber.value = params.get("number");
+
+  function lookup(){
+    A.setErr("err-status", false);
+    var box = document.getElementById("status-result");
+    box.classList.add("hidden");
+    var number = A.normalizeCN(form.snumber.value);
+    var id = form.sid.value.trim();
+    if(!id || !number){
+      A.setErr("err-status", true, "请同时填写申诉编号和当时提交的号码。");
+      return Promise.resolve();
+    }
+    return A.post({ op:"status", id:id, number: form.snumber.value }).then(function(r){
+      var res = r.res, data = r.data;
+      if(!res.ok || !data.ok){
+        A.setErr("err-status", true, "没有查到这条申诉。请核对编号和号码是否一致。");
+        return;
+      }
+      var when = data.created_at ? new Date(data.created_at).toLocaleString("zh-CN", {timeZone:"Asia/Shanghai", hour12:false, year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit"}) : "";
+      var st = data.status || "";
+      var label = A.STATUS_LABEL[st] || st;
+      box.innerHTML = "<p>编号 <strong>"+data.id+"</strong></p>"
+        +"<p>当前状态：<span class=\"status-pill "+st+"\">"+label+"</span></p>"
+        +"<p>"+(A.STATUS_DESC[st]||"")+"</p>"
+        +(when?"<p class=\"muted\">提交时间（北京时间） "+when+"</p>":"");
+      box.classList.remove("hidden");
+    }).catch(function(){
+      A.setErr("err-status", true, "查询失败，请稍后重试。");
+    });
+  }
+
+  form.addEventListener("submit", function(e){ e.preventDefault(); lookup(); });
+  if(form.sid.value && form.snumber.value) lookup();
+})();
+</script>
+</body>
+</html>
