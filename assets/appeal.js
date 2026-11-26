@@ -9,12 +9,14 @@
     else if (d.indexOf("86") === 0 && d.length >= 11) d = d.slice(2);
     if (/^1[3-9]\d{9}$/.test(d)) return "86" + d;
     if (/^0\d{9,11}$/.test(d)) return "86" + d.slice(1);
+    if (/^\d{3,15}$/.test(d)) return "86" + d;   // 110、10086、95xxx 等短号及其它 3–15 位号码
     return null;
   }
   function displayNumber(e164) {
     if (!e164) return "";
     if (/^861[3-9]\d{9}$/.test(e164)) return e164.slice(2);
-    if (/^86\d{8,13}$/.test(e164)) return "0" + e164.slice(2);
+    if (/^86\d{9,11}$/.test(e164)) return "0" + e164.slice(2);   // 固话
+    if (/^86\d{3,15}$/.test(e164)) return e164.slice(2);         // 短号等
     return e164;
   }
   function validContact(s) {

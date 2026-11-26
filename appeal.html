@@ -34,8 +34,8 @@
     <label class="f">
       <span class="lbl">被误标的号码</span>
       <input type="tel" name="number" inputmode="tel" autocomplete="tel" placeholder="手机或固话，如 13800138000" required>
-      <p class="hint" id="num-hint">手机号或带区号的固话都可以。</p>
-      <p class="err" id="err-number">请填写有效的手机号或带区号的固话。</p>
+      <p class="hint" id="num-hint">手机号、带区号的固话或 95 开头的客服短号都可以。</p>
+      <p class="err" id="err-number">请填写有效的手机号、固话或短号。</p>
     </label>
 
     <fieldset class="f">
@@ -147,7 +147,7 @@
     var n = A.normalizeCN(form.number.value);
     document.getElementById("num-hint").textContent = n
       ? "已识别为 "+A.displayNumber(n)+"。 "
-      : "手机号或带区号的固话都可以。";
+      : "手机号、带区号的固话或 95 开头的客服短号都可以。";
     A.setErr("err-number", false);
   });
 
@@ -220,7 +220,7 @@
     document.getElementById("started_at").value = String(Date.now());
     document.getElementById("company-wrap").classList.add("hidden");
     count.textContent = "0 / 200";
-    document.getElementById("num-hint").textContent = "手机号或带区号的固话都可以。";
+    document.getElementById("num-hint").textContent = "手机号、带区号的固话或 95 开头的客服短号都可以。";
     document.getElementById("to-status").setAttribute("href", "appeal-status.html");
     show("form-sec");
   };
